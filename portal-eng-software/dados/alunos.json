@@ -1,0 +1,15 @@
+{
+  "1234567890123": {
+    "nome": "Aluno de Demonstração",
+    "avisos": [
+      {
+        "titulo": "Dados de exemplo",
+        "mensagem": "Este aluno é fictício. Edite o arquivo dados/alunos.json para trocar os dados."
+      }
+    ],
+    "horarios": [
+      {"dia": 2, "inicio": "19:00", "fim": "22:30", "disciplina": "Disciplina de exemplo A", "sala": "Sala 1"},
+      {"dia": 4, "inicio": "19:00", "fim": "22:30", "disciplina": "Disciplina de exemplo B", "sala": "Lab 2"}
+    ]
+  }
+}

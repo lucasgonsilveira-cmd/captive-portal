@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>Portal Fatec Jahu | Conheça nossos cursos</title>
+  <!-- Bootstrap servido localmente (vendor/): o portal abre ANTES da internet ser liberada,
+       então não pode depender de CDN. -->
+  <link href="vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-dark container py-3" aria-label="Navegação principal">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#topo" aria-label="Fatec Jahu, início">
+        <span class="brand-mark">FJ</span>
+        <span class="brand-copy"><strong>FATEC JAHU</strong><small>Faculdade de Tecnologia</small></span>
+      </a>
+      <span class="network-pill"><span class="network-dot"></span> Portal de acesso</span>
+    </nav>
+    <div class="hero container" id="topo">
+      <div class="hero-copy">
+        <span class="eyebrow">BEM-VINDO À FATEC JAHU</span>
+        <h1>Seu próximo passo<br><span>começa com conhecimento.</span></h1>
+        <p>Explore nossos cursos, descubra novas possibilidades e encontre a formação que combina com você.</p>
+        <a class="btn btn-fatec" href="#cursos">Explorar cursos <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-core"><span>F</span><span class="core-plus">+</span></div>
+        <div class="art-label label-top">TECNOLOGIA</div><div class="art-label label-bottom">FUTURO EM MOVIMENTO</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="quick-stats row g-3" aria-label="Sobre o portal">
+      <div class="col-6 col-lg-3"><div class="stat-card"><span class="stat-icon">⌘</span><div><strong>11 cursos</strong><small>Conheça as opções</small></div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat-card"><span class="stat-icon">◷</span><div><strong>Vários formatos</strong><small>Presencial e EAD</small></div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat-card"><span class="stat-icon">⌕</span><div><strong>Explore</strong><small>Pesquise por área</small></div></div></div>
+      <div class="col-6 col-lg-3"><div class="stat-card"><span class="stat-icon">↗</span><div><strong>Seu futuro</strong><small>Começa aqui</small></div></div></div>
+    </section>
+
+    <section id="cursos" class="courses-section">
+      <div class="section-heading">
+        <div><span class="eyebrow eyebrow-dark">ENCONTRE SUA ÁREA</span><h2>Conheça nossos cursos</h2><p>Selecione um curso para ver o perfil profissional e os dados disponíveis.</p></div>
+        <span id="course-count" class="course-count">11 cursos</span>
+      </div>
+      <div class="filters row g-2 mb-4">
+        <div class="col-12 col-md-7"><label class="visually-hidden" for="course-search">Buscar curso</label><input id="course-search" class="form-control search-input" type="search" placeholder="Buscar curso pelo nome..." autocomplete="off"></div>
+        <div class="col-12 col-md-5"><label class="visually-hidden" for="area-filter">Filtrar por área</label><select id="area-filter" class="form-select search-input"><option value="all">Todas as áreas</option><option value="naval">Área naval</option><option value="tech">Tecnologia</option><option value="gestao">Gestão e negócios</option><option value="ambiental">Meio ambiente</option></select></div>
+      </div>
+      <div id="course-list" class="row g-3" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state d-none">Não encontramos cursos com esses filtros. Tente outra busca.</p>
+    </section>
+
+    <section class="newsletter-panel" aria-labelledby="newsletter-title">
+      <div class="newsletter-copy"><span class="eyebrow">FIQUE POR DENTRO</span><h2 id="newsletter-title">As próximas novidades chegam no seu e-mail.</h2><p>Receba avisos sobre vestibular, início das aulas, eventos e novidades dos cursos. Você escolhe o que quer acompanhar.</p><div class="newsletter-chips"><span>Vestibular</span><span>Início das aulas</span><span>Eventos e cursos</span></div></div>
+      <form id="newsletter-form" class="newsletter-form">
+        <label for="newsletter-email" class="form-label">Seu melhor e-mail</label>
+        <input class="form-control" id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com.br" required>
+        <fieldset><legend>Quero receber informações sobre:</legend>
+          <label class="check-option"><input type="checkbox" name="newsletter-topics" value="vestibular" checked> Vestibular e inscrições</label>
+          <label class="check-option"><input type="checkbox" name="newsletter-topics" value="inicio_aulas" checked> Início das aulas e calendário</label>
+          <label class="check-option"><input type="checkbox" name="newsletter-topics" value="eventos_cursos" checked> Eventos e novidades dos cursos</label>
+        </fieldset>
+        <button class="btn btn-fatec" type="submit">Quero receber novidades <span aria-hidden="true">→</span></button>
+        <label class="check-option consent-option"><input type="checkbox" name="consentimento" value="sim" required> Concordo em receber os avisos selecionados e sei que poderei cancelar depois.</label><p class="privacy-note">Cadastro sujeito à ativação no servidor. Use apenas um e-mail ao qual você tenha acesso.</p><div id="newsletter-msg" class="form-feedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section class="student-access" aria-labelledby="student-title">
+      <div class="student-intro"><span class="student-icon">⌂</span><div><span class="eyebrow eyebrow-dark">JÁ FAZ PARTE DA FATEC?</span><h2 id="student-title">Área do aluno</h2><p>Consulte avisos e horários usando seu Registro Acadêmico (RA).</p></div></div>
+      <details class="student-details">
+        <summary>Acessar com meu RA <span aria-hidden="true">＋</span></summary>
+        <form id="student-form" class="student-form">
+          <label class="form-label" for="ra">Registro Acadêmico (RA)</label>
+          <div class="d-flex gap-2 flex-column flex-sm-row"><input class="form-control" id="ra" name="ra" maxlength="20" autocomplete="off" placeholder="Digite seu RA" required><button class="btn btn-dark" type="submit">Consultar</button></div>
+        </form>
+        <div id="student-msg" class="student-msg" role="status"></div><div id="student-content"></div>
+      </details>
+    </section>
+
+    <section class="wifi-cta" aria-labelledby="wifi-title">
+      <div class="wifi-symbol" aria-hidden="true">⌁</div><div><h2 id="wifi-title">Tudo certo? Vamos conectar.</h2><p>Libere seu acesso à internet para continuar navegando.</p></div>
+      <button class="btn btn-fatec" id="btn-release" type="button">Liberar acesso <span aria-hidden="true">→</span></button>
+      <div id="release-msg" class="release-msg" role="status"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span><strong>Fatec Jahu</strong> · Faculdade de Tecnologia</span><span>Rua Frei Galvão, s/n · Jardim Pedro Ometto · Jaú – SP</span><a href="https://fatecjahu.edu.br/" target="_blank" rel="noopener">Site oficial ↗</a></div></footer>
+
+  <div class="modal fade" id="course-modal" tabindex="-1" aria-labelledby="modal-course-name" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"><div class="modal-content course-modal-content">
+      <div class="modal-header"><div><span id="modal-area" class="course-tag">ÁREA</span><h2 class="modal-title" id="modal-course-name">Nome do curso</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+      <div class="modal-body"><div id="modal-meta" class="modal-meta"></div><h3>Perfil profissional</h3><p id="modal-profile"></p><div class="curriculum-note"><strong>Grade curricular e horários</strong><p>Consulte a página oficial do curso para verificar a matriz curricular, os horários e eventuais atualizações. Esses dados podem mudar por turma e semestre.</p><a id="official-course-link" href="https://fatecjahu.edu.br/" target="_blank" rel="noopener">Ver informações oficiais ↗</a></div><div id="modal-contact" class="modal-contact"></div></div>
+      <div class="modal-footer justify-content-between"><button id="btn-interest" class="btn btn-outline-dark" type="button">Tenho interesse neste curso</button><button class="btn btn-fatec" type="button" data-bs-dismiss="modal">Continuar explorando</button></div>
+    </div></div>
+  </div>
+  <div class="modal fade" id="interest-modal" tabindex="-1" aria-labelledby="interest-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content interest-content">
+      <div class="modal-header"><div><span class="eyebrow eyebrow-dark">ACOMPANHE ESTE CURSO</span><h2 class="modal-title" id="interest-title">Receba novidades por e-mail</h2><p class="interest-course-line">Curso: <strong id="interest-course-name">Nome do curso</strong></p></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+      <form id="interest-form"><div class="modal-body">
+        <input type="hidden" id="interest-course-id" name="curso">
+        <label for="interest-email" class="form-label">Seu e-mail</label><input class="form-control" id="interest-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com.br" required>
+        <fieldset class="interest-topics"><legend>Quais avisos você quer receber?</legend>
+          <label class="check-option"><input type="checkbox" name="topics" value="vestibular" checked> Vestibular e inscrições</label>
+          <label class="check-option"><input type="checkbox" name="topics" value="inicio_aulas" checked> Início das aulas e calendário</label>
+          <label class="check-option"><input type="checkbox" name="topics" value="curso" checked> Novidades deste curso</label>
+          <label class="check-option"><input type="checkbox" name="topics" value="eventos"> Feiras e eventos da Fatec</label>
+        </fieldset>
+        <label class="check-option consent-option"><input type="checkbox" name="consentimento" value="sim" required> Concordo em receber os avisos selecionados e sei que poderei cancelar depois.</label><p class="privacy-note">O servidor deve oferecer uma forma de cancelar o recebimento.</p><div id="interest-msg" class="form-feedback" role="status" aria-live="polite"></div>
+      </div><div class="modal-footer"><button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Agora não</button><button class="btn btn-fatec" type="submit">Quero receber avisos</button></div></form>
+    </div></div>
+  </div>
+  <div class="modal fade" id="success-modal" tabindex="-1" aria-labelledby="success-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content success-content"><div class="success-check">✓</div><h2 id="success-title">Acesso liberado!</h2><p>Você já pode navegar normalmente. Obrigado por conhecer um pouco da Fatec Jahu.</p><button class="btn btn-fatec" data-bs-dismiss="modal">Concluir</button></div></div></div>
+
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
